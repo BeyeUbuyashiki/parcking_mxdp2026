@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="theme-color" content="#0a2a6e" />
-  <title>Parkings Événement</title>
+  <title>Espace Venise – Événement</title>
   <style>
     * {
       margin: 0;
@@ -209,6 +209,78 @@
       flex-shrink: 0;
     }
 
+    /* ── CARTE SALLE ── */
+    .venue-section {
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 22px;
+    }
+
+    .venue-label {
+      text-align: center;
+      color: rgba(255,255,255,0.75);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .card-venue {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+      border: 2px solid #7ec8ff;
+    }
+
+    .venue-badge {
+      background: linear-gradient(135deg, #0a7a4e, #12a86a);
+    }
+
+    .btn-nav-venue {
+      background: linear-gradient(135deg, #0a7a4e, #12a86a);
+      box-shadow: 0 4px 14px rgba(10,122,78,0.4);
+    }
+
+    /* ── SÉPARATEUR ── */
+    .section-title {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      color: rgba(255,255,255,0.75);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      margin-top: 4px;
+    }
+
+    .divider {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0 18px;
+    }
+
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.25);
+    }
+
+    .divider span {
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
     /* ── PIED ── */
     .footer {
       margin-top: 28px;
@@ -226,8 +298,8 @@
   <!-- EN-TÊTE -->
   <header class="header">
     <div class="badge">Espace Chauffeurs</div>
-    <h1>Où <span>garer</span> votre véhicule ?</h1>
-    <p class="subtitle">Deux parkings dédiés aux participants</p>
+    <h1>Bienvenue à <span>l'événement</span></h1>
+    <p class="subtitle">Trouvez la salle et garez-vous facilement</p>
   </header>
 
   <!-- INSTRUCTION -->
@@ -236,7 +308,7 @@
     <span class="arrow-down">↓</span>
   </div>
 
-  <!-- CARTES -->
+  <!-- CARTES PARKINGS -->
   <div class="cards">
 
     <!-- PARKING 1 -->
@@ -297,6 +369,40 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- SÉPARATEUR -->
+  <div class="divider" style="margin-top: 22px;"><span>Lieu de l'événement</span></div>
+
+  <!-- SALLE DE L'ÉVÉNEMENT -->
+  <div class="venue-section">
+    <div class="card card-venue">
+      <img
+        class="card-photo"
+        src="salle.jpg"
+        alt="Espace Venise"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <div class="card-photo-placeholder" style="display:none;">
+        📷 Photo de la salle
+      </div>
+      <div class="card-body">
+        <span class="card-number venue-badge">Lieu de l'événement</span>
+        <div class="card-title">Espace Venise</div>
+        <div class="card-desc">Déposez vos passagers ici avant de vous garer dans l'un des parkings ci-dessus.</div>
+        <a
+          class="btn-nav btn-nav-venue"
+          href="https://maps.app.goo.gl/4W5BHK5egsFTxsBv5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+          </svg>
+          Naviguer vers la salle
+        </a>
+      </div>
+    </div>
   </div>
 
   <!-- PIED -->
